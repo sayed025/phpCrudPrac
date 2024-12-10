@@ -207,7 +207,7 @@ $total_pages = ceil($total_records / $limit);
 <body>
     <!-- Search Bar -->
 
-    <form action="employee.php" method="POST">
+    <form action="index.php" method="POST">
         <div class="search-container">
             <input type="text" name="search" placeholder="Search by Name" value="<?php echo htmlspecialchars($search_term); ?>">
             <button type="submit">Search</button>
@@ -223,11 +223,11 @@ $total_pages = ceil($total_records / $limit);
         echo "<thead>";
         echo "<tr>";
         // Add sorting links with arrows
-        echo "<th class='" . ($sort_column == 'employee_id' ? 'sorted-' . $sort_order : '') . "'><a href='employee.php?sort_column=employee_id&sort_order=" . ($sort_column == 'employee_id' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>ID<span class='sort-arrow'></span></a></th>";
-        echo "<th class='" . ($sort_column == 'name' ? 'sorted-' . $sort_order : '') . "'><a href='employee.php?sort_column=name&sort_order=" . ($sort_column == 'name' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Name<span class='sort-arrow'></span></a></th>";
-        echo "<th class='" . ($sort_column == 'designation' ? 'sorted-' . $sort_order : '') . "'><a href='employee.php?sort_column=designation&sort_order=" . ($sort_column == 'designation' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Designation<span class='sort-arrow'></span></a></th>";
-        echo "<th class='" . ($sort_column == 'attendance_rate' ? 'sorted-' . $sort_order : '') . "'><a href='employee.php?sort_column=attendance_rate&sort_order=" . ($sort_column == 'attendance_rate' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Attendance Rate<span class='sort-arrow'></span></a></th>";
-        echo "<th class='" . ($sort_column == 'average_task_efficiency' ? 'sorted-' . $sort_order : '') . "'><a href='employee.php?sort_column=average_task_efficiency&sort_order=" . ($sort_column == 'average_task_efficiency' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Average Task Efficiency<span class='sort-arrow'></span></a></th>";
+        echo "<th class='" . ($sort_column == 'employee_id' ? 'sorted-' . $sort_order : '') . "'><a href='index.php?sort_column=employee_id&sort_order=" . ($sort_column == 'employee_id' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>ID<span class='sort-arrow'></span></a></th>";
+        echo "<th class='" . ($sort_column == 'name' ? 'sorted-' . $sort_order : '') . "'><a href='index.php?sort_column=name&sort_order=" . ($sort_column == 'name' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Name<span class='sort-arrow'></span></a></th>";
+        echo "<th class='" . ($sort_column == 'designation' ? 'sorted-' . $sort_order : '') . "'><a href='index.php?sort_column=designation&sort_order=" . ($sort_column == 'designation' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Designation<span class='sort-arrow'></span></a></th>";
+        echo "<th class='" . ($sort_column == 'attendance_rate' ? 'sorted-' . $sort_order : '') . "'><a href='index.php?sort_column=attendance_rate&sort_order=" . ($sort_column == 'attendance_rate' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Attendance Rate<span class='sort-arrow'></span></a></th>";
+        echo "<th class='" . ($sort_column == 'average_task_efficiency' ? 'sorted-' . $sort_order : '') . "'><a href='index.php?sort_column=average_task_efficiency&sort_order=" . ($sort_column == 'average_task_efficiency' && $sort_order == 'asc' ? 'desc' : 'asc') . "'>Average Task Efficiency<span class='sort-arrow'></span></a></th>";
         echo "<th>Edit</th>";
         echo "<th>Delete</th>";
         echo "</tr>";
@@ -260,8 +260,8 @@ $total_pages = ceil($total_records / $limit);
 
     <!-- Pagination-->
     <div class="pagination">
-        <button <?php if ($page <= 1) echo 'disabled'; ?> onclick="window.location.href='employee.php?page=<?php echo $page - 1; ?>&sort_column=<?php echo $sort_column; ?>&sort_order=<?php echo $sort_order; ?>'">Previous</button>
-        <button <?php if ($page >= $total_pages) echo 'disabled'; ?> onclick="window.location.href='employee.php?page=<?php echo $page + 1; ?>&sort_column=<?php echo $sort_column; ?>&sort_order=<?php echo $sort_order; ?>'">Next</button>
+        <button <?php if ($page <= 1) echo 'disabled'; ?> onclick="window.location.href='index.php?page=<?php echo $page - 1; ?>&sort_column=<?php echo $sort_column; ?>&sort_order=<?php echo $sort_order; ?>'">Previous</button>
+        <button <?php if ($page >= $total_pages) echo 'disabled'; ?> onclick="window.location.href='index.php?page=<?php echo $page + 1; ?>&sort_column=<?php echo $sort_column; ?>&sort_order=<?php echo $sort_order; ?>'">Next</button>
     </div>
 
     <script>

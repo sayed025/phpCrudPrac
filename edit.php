@@ -119,7 +119,7 @@ mysqli_close($conn);
 <body>
     <div class="edit-page">
         <div>
-            <a href="employee.php">Home</a>
+            <a href="index.php">Home</a>
         </div>
         <div class="container">
             <h2>Edit Employee</h2>

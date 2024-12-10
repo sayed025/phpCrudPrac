@@ -19,7 +19,7 @@ if (isset($employee_id) && is_numeric($employee_id)) {
 
     if (mysqli_query($conn, $sql)) {
 
-        header("Location: employee.php");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error deleting record: " . mysqli_error($conn);

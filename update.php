@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_bind_param($stmt, "ssddi", $name, $designation, $attendance_rate, $average_task_efficiency, $employee_id);
 
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: employee.php");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error updating record: " . mysqli_error($conn);
